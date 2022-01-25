@@ -1,0 +1,41 @@
+{
+	"ProductCollection": [{
+		"CurrencyCode": "USD",
+		"Name": "Smart Watch",
+		"Price": 20.53,
+		"Quantity": 4,
+		"Status": "Available"
+	}, {
+		"CurrencyCode": "USD",
+		"Name": "Headset",
+		"Price": 14.20,
+		"Quantity": 40,
+		"Status": "Available"
+	}, {
+		"CurrencyCode": "USD",
+		"Name": "Laptop",
+		"Price": 18.20,
+		"Quantity": 40,
+		"Status": "Out of Stock"
+	}, {
+		"CurrencyCode": "USD",
+		"Name": "WindMill",
+		"Price": 87.20,
+		"Quantity": 10,
+		"Status": "Out of Stock"
+	}, {
+		"CurrencyCode": "USD",
+		"Name": "Automated Car",
+		"Price": 300.20,
+		"Quantity": 20,
+		"Status": "Discontinued"
+	},
+	{
+		"CurrencyCode": "USD",
+		"Name": "All Mobile",
+		"Price": 28.20,
+		"Quantity": 15,
+		"Status": "Available"
+	}]
+
+}

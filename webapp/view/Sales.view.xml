@@ -1,0 +1,47 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.accenture.ZSR_ASSIGNMENT.controller.Sales"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:viz="sap.viz.ui5.controls" xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data" xmlns:layout="sap.ui.layout">
+	<App>
+		<pages>
+			<Page class="page2BgImg1 sapUiSizeCompact">
+				<customHeader>
+					<Bar class="headerBg">
+						<contentLeft>
+							<Button type="Back" press="onNavBack"></Button>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="{i18n>Sales Report}" class="headerText"></Title>
+						</contentMiddle>
+						<contentRight>
+							<Button text="Logout" type="Transparent" icon="sap-icon://log" press="onLogout"></Button>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<layout:FixFlex id='chartFixFlex' minFlexSize="250" class="cl_saleContent">
+						<layout:flexContent>
+							<!--<viz:Popover id="idPopOver"></viz:Popover>-->
+							<viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" height='100%' width="100%" vizType='column'
+								vizProperties="{title:{ text:'Sales By Products'}}">
+								<viz:dataset>
+									<viz.data:FlattenedDataset data="{Population>/Population}">
+										<viz.data:dimensions>
+											<viz.data:DimensionDefinition name="Product" value="{Population>Product}"/>
+										</viz.data:dimensions>
+										<viz.data:measures>
+											<viz.data:MeasureDefinition name="Sales" value="{Population>Sales}"/>
+										</viz.data:measures>
+									</viz.data:FlattenedDataset>
+								</viz:dataset>
+								<viz:feeds>
+									<viz.feeds:FeedItem id='valueAxisFeed' uid="valueAxis" type="Measure" values="Sales"/>
+									<viz.feeds:FeedItem id='categoryAxisFeed' uid="categoryAxis" type="Dimension" values="Product"/>
+								</viz:feeds>
+							</viz:VizFrame>
+						</layout:flexContent>
+					</layout:FixFlex>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

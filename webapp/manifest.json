@@ -1,0 +1,167 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "com.accenture.ZSR_ASSIGNMENT",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "com.accenture.ZSR_ASSIGNMENT.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "com.accenture.ZSR_ASSIGNMENT.i18n.i18n"
+				}
+			},
+			"UserDetails": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/UserDetails.json",
+				"preload": false
+			},
+			"EmpDetails": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/Employee.json",
+				"preload": false
+			},
+			"": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/Products.json",
+				"preload": false
+			},
+			"Population": {
+				"type": "sap.ui.model.json.JSONModel",
+				"settings": {},
+				"uri": "model/Chart.json",
+				"preload": false
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "com.accenture.ZSR_ASSIGNMENT.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false,
+				"bypassed": {
+					"target": []
+				}
+			},
+			"routes": [{
+				"name": "Login",
+				"pattern": "",
+				"target": ["Login"]
+			}, {
+				"name": "Home",
+				"pattern": "Home/{name}",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Home"]
+			}, {
+				"name": "Employee",
+				"pattern": "Employee",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Employee"]
+			}, {
+				"name": "Product",
+				"pattern": "Product",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Product"]
+			}, {
+				"name": "Sales",
+				"pattern": "Sales",
+				"titleTarget": "",
+				"greedy": false,
+				"target": ["Sales"]
+			}],
+			"targets": {
+				"Login": {
+					"viewType": "XML",
+					"transition": "flip",
+					"clearControlAggregation": false,
+					"viewName": "Login",
+					"viewLevel": 1
+				},
+				"Home": {
+					"viewType": "XML",
+					"viewName": "Home",
+					"viewLevel": 2,
+					"clearControlAggregation": false
+				},
+				"Employee": {
+					"viewType": "XML",
+					"viewName": "Employee",
+					"viewLevel": 3,
+					"clearControlAggregation": false
+				},
+				"Product": {
+					"viewType": "XML",
+					"viewName": "Product",
+					"viewLevel": 4,
+					"clearControlAggregation": false
+				},
+				"Sales": {
+					"viewType": "XML",
+					"viewName": "Sales",
+					"viewLevel": 5,
+					"clearControlAggregation": false
+				}
+			}
+		}
+	}
+}

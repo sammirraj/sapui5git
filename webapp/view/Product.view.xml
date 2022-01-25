@@ -1,0 +1,46 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.accenture.ZSR_ASSIGNMENT.controller.Product" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page class="page2BgImg sapUiSizeCompact" backgroundDesign="Transparent">
+				<customHeader>
+					<Bar class="headerBg">
+						<contentLeft>
+							<Button type="Back" press="onNavBack"></Button>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="{i18n>Product Details}" class="headerText"></Title>
+						</contentMiddle>
+						<contentRight>
+							<Button text="Logout" type="Transparent" icon="sap-icon://log" press="onLogout"></Button>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<!--<List items="{ProductCollection>/ProductCollection}" headerText="ProductsData">-->
+					<!--	<ObjectListItem title="{ProductCollection>Name}" type="Active" press="onListItemPress"-->
+					<!--		number="{ parts:[{path:'ProductCollection>Price'},{path:'ProductCollection>CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"-->
+					<!--		numberUnit="{ProductCollection>CurrencyCode}">-->
+					<!--		<firstStatus>-->
+					<!--			<ObjectStatus text="{ProductCollection>Status}" state="{ path: 'ProductCollection>Status', formatter: 'com.accenture.ZSR_ASSIGNMENT.utill.Formatter.status' }"/>-->
+					<!--		</firstStatus>-->
+					<!--		<ObjectAttribute text="{ProductCollection>WeightMeasure} {ProductCollection>WeightUnit}"/>-->
+					<!--		<ObjectAttribute text="{ProductCollection>Width} x {ProductCollection>Depth} x {ProductCollection>Height} {ProductCollection>DimUnit}"/>-->
+					<!--	</ObjectListItem>-->
+					<!--</List>-->
+						<List items="{/ProductCollection}" headerText="ProductsData" class="cl_panel">
+							<headerToolbar></headerToolbar>
+							<ObjectListItem title="{Name}" type="Active" press="onListItemPress"
+								number="{ parts:[{path:'Price'},{path:'CurrencyCode'}], type: 'sap.ui.model.type.Currency', formatOptions: {showMeasure: false} }"
+								numberUnit="{CurrencyCode}">
+								<firstStatus>
+									<ObjectStatus text="{Status}" state="{ path: 'Status', formatter: 'com.accenture.ZSR_ASSIGNMENT.utill.Formatter.status' }"/>
+								</firstStatus>
+								<ObjectAttribute text="Quantity: {Quantity}" class="cl_warning" />
+							</ObjectListItem>
+						</List>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

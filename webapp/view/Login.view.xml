@@ -1,0 +1,38 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="com.accenture.ZSR_ASSIGNMENT.controller.Login" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page class="page2BgImg sapUiSizeCompact">
+				<customHeader>
+					<Bar class="headerBg">
+						<contentLeft>
+							<Image class="cl_img" src="Image/accenture_logo.png"/>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="{i18n>logtitle}" class="headerText"></Title>
+						</contentMiddle>
+					</Bar>
+				</customHeader>
+				<content>
+					<VBox justifyContent='Center' class="cl_vbox" height='100%'>
+						<f:SimpleForm id="SimpleFormChange354" editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="3"
+							labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+							singleContainerFullSize="false" class="sapUiLargeMarginTop">
+							<f:content>
+								<Label text=""/>
+								<Input value="{/Login/Username}" width="60%" placeholder="Enter Username"/>
+								<Label text=""/>
+								<Input value="{/Login/Password}" width="60%" placeholder="Enter Password" type="Password"/>
+								<Label text=""/>
+								<HBox>
+									<Button type="Emphasized" text="{i18n>Login}" press="onLogin" width="12em" class="sapUiTinyMarginEnd"/>
+									<Button type="Reject" text="{i18n>Reset}" press="onReset" width="6em"/>
+								</HBox>
+							</f:content>
+						</f:SimpleForm>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

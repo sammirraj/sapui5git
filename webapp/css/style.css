@@ -1,0 +1,64 @@
+/* Enter your custom styles here */
+.page2BgImg {
+    background-image: url('../Image/Accenture.jpg');
+    background-size: 100% 100%;
+}
+
+.page2BgImg1 {
+    background-image: url('../Image/Accenture.jpg');
+    background-size: 100% 100%;
+
+}
+
+.cl_img {
+    height: 4rem !important;
+    margin-left: 1em !important;
+}
+
+.headerBg {
+    background-color: #fff !important;
+}
+
+.headerText {
+    font-weight: normal;
+    font-size: 16px;
+    color: #6a6d70 !important;
+}
+
+.cl_vbox {
+    margin-left: 16em !important;
+}
+.cl_hbox {
+	margin-top: 12em !important;
+}
+.cl_panel .sapMListHdrText {
+    font-weight: normal;
+    font-size: 16px;
+    color: #fff !important;
+}
+
+.cl_Label_1 {
+    font-family: monospace;
+    font-size: 15px !important;
+    color: Black !important;
+}
+
+.cl_ListTitle {
+    color: #fff !important;
+}
+
+.salesClass {
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .5));
+}
+
+.cl_warning .sapMText {
+    color: #e78c07 !important;
+}
+.cl_panel .sapMLIB {
+    background: #fff;
+    opacity: 0.9;
+}
+.cl_saleContent {
+    background: antiquewhite;
+    opacity: 0.9;
+}

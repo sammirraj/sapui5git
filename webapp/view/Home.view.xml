@@ -1,0 +1,44 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.accenture.ZSR_ASSIGNMENT.controller.Home"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page class="page2BgImg sapUiSizeCompact" enableScrolling="false">
+				<customHeader>
+					<Bar class="headerBg">
+						<contentLeft>
+							<Label class="cl_Label_1" text="Welcome, {/Login/Username}"/>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="{i18n>logtitle}" class="headerText"></Title>
+						</contentMiddle>
+						<contentRight>
+							<Button text="Logout" type="Transparent" icon="sap-icon://log" press="onLogout"></Button>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<HBox justifyContent='Center' class="cl_hbox" height='100%'>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Employee" subheader="Details"
+							press="onGen1press">
+							<TileContent footer="Total Count = 4">
+								<ImageContent src="Image/emp.jpg"/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" header="Product" subheader="Details"
+							press="onGen2press">
+							<TileContent footer="Total : {EmpDetails>$count}">
+								<ImageContent src="Image/product.jpg"/>
+							</TileContent>
+						</GenericTile>
+						<GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout"
+							header="Sales" subheader="Report" press="onGen3press">
+							<TileContent footer="Total Count = 7">
+								<ImageContent src="Image/sales.png"/>
+							</TileContent>
+						</GenericTile>
+					</HBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

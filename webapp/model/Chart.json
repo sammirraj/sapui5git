@@ -1,0 +1,18 @@
+{
+	"Population": [{
+		"Product": "RaspBerry Pi",
+		"Sales": "100"
+	}, {
+		"Product": "Drone",
+		"Sales": "50"
+	}, {
+		"Product": "WindMill",
+		"Sales": "110"
+	}, {
+		"Product": "All Mobiles",
+		"Sales": "80"
+	}, {
+		"Product": "Automated",
+		"Sales": "40"
+	}]
+}

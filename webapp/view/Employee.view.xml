@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.accenture.ZSR_ASSIGNMENT.controller.Employee" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page class="page2BgImg" backgroundDesign="Solid">
+				<customHeader>
+					<Bar class="headerBg">
+						<contentLeft>
+							<Button type="Back" press="onNavBack"></Button>
+						</contentLeft>
+						<contentMiddle>
+							<Title text="{i18n>Employee Details}" class="headerText"></Title>
+						</contentMiddle>
+						<contentRight>
+							<Button text="Logout" type="Transparent" icon="sap-icon://log" press="onLogout"></Button>
+						</contentRight>
+					</Bar>
+				</customHeader>
+				<content>
+					<Table id="rejectData" items="{EmpDetails>/}">
+						<infoToolbar>
+							<OverflowToolbar active="true" press="handleInfobarPress">
+								<Label text="All Employee Details"/>
+							</OverflowToolbar>
+						</infoToolbar>
+						<columns>
+							<Column>
+								<Text text="Emp Name"/>
+							</Column>
+							<Column>
+								<Text text="Salary"/>
+							</Column>
+							<Column>
+								<Text text="Currency"/>
+							</Column>
+							<Column >
+								<Text text="Designation"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem>
+								<cells>
+									<ObjectIdentifier title="{EmpDetails>empname}"/>
+									<Text text="{EmpDetails>salary}"/>
+									<Text text="{EmpDetails>currency}"/>
+									<Text text="{EmpDetails>designation}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
